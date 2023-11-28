@@ -16,36 +16,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to tell you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYs-A1-n7s">
-                                <rect key="frame" x="83" y="219" width="226" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I love you" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kEG-D2-qF4">
-                                <rect key="frame" x="38" y="348" width="317" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-SK-WsB">
-                                <rect key="frame" x="123" y="587" width="146" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Click!">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="clickButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJE-mw-mKp"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="VM9-qe-6QG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEs-ge-tbr" userLabel="FirstView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="252.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to tell you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYs-A1-n7s">
+                                                <rect key="frame" x="83.666666666666686" y="108.33333333333334" width="225.66666666666663" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eYs-A1-n7s" firstAttribute="centerY" secondItem="aEs-ge-tbr" secondAttribute="centerY" id="Uuh-xO-ekp"/>
+                                            <constraint firstItem="eYs-A1-n7s" firstAttribute="centerX" secondItem="aEs-ge-tbr" secondAttribute="centerX" id="kb1-co-Cgy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE5-xc-Ajz" userLabel="SecondView">
+                                        <rect key="frame" x="0.0" y="253.33333333333331" width="393" height="252.33333333333331"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I love you" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kEG-D2-qF4">
+                                                <rect key="frame" x="36.666666666666657" y="46.333333333333371" width="320" height="160"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="DMV-Kt-NBA"/>
+                                                    <constraint firstAttribute="height" constant="160" id="Iuf-DA-OoX"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kEG-D2-qF4" firstAttribute="centerX" secondItem="AE5-xc-Ajz" secondAttribute="centerX" id="VXV-HX-f2k"/>
+                                            <constraint firstItem="kEG-D2-qF4" firstAttribute="centerY" secondItem="AE5-xc-Ajz" secondAttribute="centerY" id="VuL-R4-N0f"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-eU-lPQ" userLabel="ThirdView">
+                                        <rect key="frame" x="0.0" y="506.66666666666657" width="393" height="252.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-SK-WsB">
+                                                <rect key="frame" x="121.66666666666669" y="98.666666666666742" width="150" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6vw-hN-vIZ"/>
+                                                    <constraint firstAttribute="height" constant="55" id="bGn-us-vah"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Click!">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clickButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJE-mw-mKp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4yq-SK-WsB" firstAttribute="centerY" secondItem="SXd-eU-lPQ" secondAttribute="centerY" id="GVO-Jn-PUi"/>
+                                            <constraint firstItem="4yq-SK-WsB" firstAttribute="centerX" secondItem="SXd-eU-lPQ" secondAttribute="centerX" id="mXZ-Fu-0md"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.85882352941176465" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VM9-qe-6QG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9PR-A1-hul"/>
+                            <constraint firstItem="VM9-qe-6QG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jir-CP-OGC"/>
+                            <constraint firstAttribute="trailing" secondItem="VM9-qe-6QG" secondAttribute="trailing" id="rkt-lR-3c2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VM9-qe-6QG" secondAttribute="bottom" id="tS6-yv-BdF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="UITextView" destination="kEG-D2-qF4" id="MAH-vu-0Lc"/>
